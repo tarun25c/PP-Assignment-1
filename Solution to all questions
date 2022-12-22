@@ -1,0 +1,83 @@
+Solution 1:
+
+def two_sum(list,target):
+    i = 0
+    j = 1
+
+    while(i < len(list) - 1):
+        if(list[i] + list[j] == target):
+            return i, j
+            break
+
+        else:
+            if (j == len(list) - 1):
+                i += 1
+                j = i + 1
+
+                
+            else:
+                j += 1
+          
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 2:
+
+def power(base,power):
+    ans = 1
+    for i in range(power):
+        ans = ans * base
+
+    return ans
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 3:
+
+def increment(number):
+    new_num = str(number + 1)
+    a = []
+    for i in new_num:
+        a.append(int(i))
+
+    return a
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 4:
+
+def max_profit(prices):
+    i = 0
+    j = 1
+    max = -99999
+    while (i < len(prices) - 1):
+        profit = prices[j] - prices[i]
+        if (profit > max):
+            max = profit
+
+        else:
+            if (j == len(prices) - 1):
+                i += 1
+                j = i + 1
+
+            else:
+                j += 1
+
+    return max
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution 5:
+
+def Palindrome(num: str):
+    i = 0
+    string_num = str(num)
+    j = len(string_num) - 1
+    while(i <= j):
+        if(string_num[i] == string_num[j]):
+            i += 1
+            j -= 1
+
+        else:
+            return False
+
+    return True
